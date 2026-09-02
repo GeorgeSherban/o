@@ -1,19 +1,36 @@
-<script>
-    // HIER NUR DIE SONG-ID EINTRAGEN:
-    const trackId = "1GT9jsKDk6osfnR5lWIUMD";
-
-    const webUrl = "https://open.spotify.com/track/" + trackId;
-    const appUrl = "spotify:track:" + trackId;
-
-    const link = document.getElementById("spotify-link");
-    link.href = webUrl;
-
-    // Klick-Handler: Versucht erst die App, fällt sonst auf Web-Link zurück
-    link.addEventListener("click", function(e) {
-      // Lässt iOS den offiziellen Universal Link verarbeiten
-      window.location.href = webUrl;
-    });
-
-    // Automatischer Versuch beim Laden
-    window.location.href = webUrl;
-  </script>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Song anhören</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .btn {
+      background-color: #1DB954;
+      color: #000000;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 16px 32px;
+      border-radius: 30px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Tattoo-Song</h2>
+  <!-- HIER BEI EINEM WECHSEL NUR DIE ID HINTER /track/ TAUSCHEN -->
+  <a class="btn" href="https://open.spotify.com/track/1GT9jsKDk6osfnR5lWIUMD">In Spotify öffnen</a>
+</body>
+</html>
