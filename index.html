@@ -1,47 +1,19 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Song anhören</title>
-  <style>
-    body {
-      background-color: #121212;
-      color: #ffffff;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .btn {
-      background-color: #1DB954;
-      color: #000000;
-      text-decoration: none;
-      font-size: 1.2rem;
-      font-weight: bold;
-      padding: 16px 32px;
-      border-radius: 30px;
-      display: inline-block;
-      margin-top: 20px;
-    }
-  </style>
-</head>
-<body>
-  <h2>Tattoo-Song</h2>
-  <a id="spotify-link" class="btn" href="#">In Spotify öffnen</a>
-
-  <script>
-    // HIER NUR EINMAL DIE SONG-ID EINTRAGEN:
+<script>
+    // HIER NUR DIE SONG-ID EINTRAGEN:
     const trackId = "1GT9jsKDk6osfnR5lWIUMD";
 
-    const link = document.getElementById("spotify-link");
-    link.href = "spotify:track:" + trackId;
+    const webUrl = "https://open.spotify.com/track/" + trackId;
+    const appUrl = "spotify:track:" + trackId;
 
-    // Versucht den Direktstart; falls Safari blockiert, bleibt der Button:
-    window.location.href = "spotify:track:" + trackId;
+    const link = document.getElementById("spotify-link");
+    link.href = webUrl;
+
+    // Klick-Handler: Versucht erst die App, fällt sonst auf Web-Link zurück
+    link.addEventListener("click", function(e) {
+      // Lässt iOS den offiziellen Universal Link verarbeiten
+      window.location.href = webUrl;
+    });
+
+    // Automatischer Versuch beim Laden
+    window.location.href = webUrl;
   </script>
-</body>
-</html>
