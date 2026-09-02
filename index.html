@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Weiterleitung...</title>
-  <meta http-equiv="refresh" content="0; url=https://open.spotify.com/track/1GT9jsKDk6osfnR5lWIUMD">
   <script>
-    window.location.href = "spotify:track:1GT9jsKDk6osfnR5lWIUMD";
+    // HIER NUR EINMAL DIE SONG-ID EINTRAGEN:
+    const trackId = "1GT9jsKDk6osfnR5lWIUMD";
+
+    window.location.href = "spotify:track:" + trackId;
     setTimeout(function() {
-      window.location.href = "https://open.spotify.com/track/1GT9jsKDk6osfnR5lWIUMD";
+      window.location.href = "https://open.spotify.com/track/" + trackId;
     }, 500);
   </script>
 </head>
