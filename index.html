@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Song anhören</title>
+  <title>Tattoo Song</title>
   <style>
     body {
       background-color: #121212;
@@ -17,12 +17,25 @@
       margin: 0;
       padding: 20px;
       box-sizing: border-box;
+      text-align: center;
+    }
+    .btn {
+      background-color: #1DB954;
+      color: #000000;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      padding: 14px 28px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-top: 24px;
     }
   </style>
 </head>
 <body>
   <h2>Tattoo-Song</h2>
-  <!-- Offizieller Spotify-Widget-Player -->
+
+  <!-- Player-Vorschau -->
   <iframe style="border-radius:12px" 
           src="https://open.spotify.com/embed/track/1GT9jsKDk6osfnR5lWIUMD?utm_source=generator" 
           width="100%" 
@@ -32,5 +45,8 @@
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
           loading="lazy">
   </iframe>
+
+  <!-- Direkter App-Sprung -->
+  <a class="btn" href="spotify:track:1GT9jsKDk6osfnR5lWIUMD">Direkt in Spotify-App abspielen</a>
 </body>
 </html>
